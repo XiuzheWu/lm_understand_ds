@@ -1,0 +1,198 @@
+[
+  {
+    "id": "a9f535cc",
+    "game": "breakout",
+    "changed_request_fields": [
+      "max_tokens"
+    ],
+    "old": {
+      "id": "a9f535cc",
+      "true": "breakout",
+      "returned_model": "deepseek-flash",
+      "stop_reason": "end_turn",
+      "usage": {
+        "input_tokens": 70299,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 30785,
+        "service_tier": "standard"
+      },
+      "wall_seconds": 179.194073,
+      "exit_code": 0,
+      "reasoning_chars": 94566,
+      "live": true,
+      "game_line": "Breakout—a simplified/10×10-grid version of Atari Breakout.",
+      "guess": "breakout",
+      "correct": true,
+      "confidence": 96.0
+    },
+    "new": {
+      "id": "a9f535cc",
+      "true": "breakout",
+      "returned_model": "deepseek-flash",
+      "stop_reason": "end_turn",
+      "usage": {
+        "input_tokens": 155,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 70144,
+        "output_tokens": 24263,
+        "service_tier": "standard"
+      },
+      "wall_seconds": 118.047714,
+      "exit_code": 0,
+      "reasoning_chars": 61549,
+      "live": true,
+      "game_line": "Breakout / brick-breaker (a simplified Atari Breakout-like grid game).",
+      "guess": "breakout",
+      "correct": true,
+      "confidence": 95.0
+    }
+  },
+  {
+    "id": "dfc6cb65",
+    "game": "pong",
+    "changed_request_fields": [
+      "max_tokens"
+    ],
+    "old": {
+      "id": "dfc6cb65",
+      "true": "pong",
+      "returned_model": "deepseek-flash",
+      "stop_reason": "end_turn",
+      "usage": {
+        "input_tokens": 69121,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1152,
+        "output_tokens": 23508,
+        "service_tier": "standard"
+      },
+      "wall_seconds": 120.605397,
+      "exit_code": 0,
+      "reasoning_chars": 59904,
+      "live": true,
+      "game_line": "Pong, specifically a Pong-like tennis game on a 10×10 grid with an 8×8 playable interior.",
+      "guess": "pong",
+      "correct": true,
+      "confidence": 94.0
+    },
+    "new": {
+      "id": "dfc6cb65",
+      "true": "pong",
+      "returned_model": "deepseek-flash",
+      "stop_reason": "end_turn",
+      "usage": {
+        "input_tokens": 134,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 70139,
+        "output_tokens": 46885,
+        "service_tier": "standard"
+      },
+      "wall_seconds": 243.138607,
+      "exit_code": 0,
+      "reasoning_chars": 128324,
+      "live": true,
+      "game_line": "Pong (Atari-style Pong).",
+      "guess": "pong",
+      "correct": true,
+      "confidence": 98.0
+    }
+  },
+  {
+    "id": "bdf99279",
+    "game": "pacman",
+    "changed_request_fields": [
+      "max_tokens"
+    ],
+    "old": {
+      "id": "bdf99279",
+      "true": "pacman",
+      "returned_model": "deepseek-flash",
+      "stop_reason": "end_turn",
+      "usage": {
+        "input_tokens": 69505,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 768,
+        "output_tokens": 29337,
+        "service_tier": "standard"
+      },
+      "wall_seconds": 148.054874,
+      "exit_code": 0,
+      "reasoning_chars": 75662,
+      "live": true,
+      "game_line": "Pac-Man (a small grid Pac-Man-style maze game; most likely the Pac-Man environment rather than Ms. Pac-Man).",
+      "guess": "pacman",
+      "correct": true,
+      "confidence": 93.0
+    },
+    "new": {
+      "id": "bdf99279",
+      "true": "pacman",
+      "returned_model": "deepseek-flash",
+      "stop_reason": "end_turn",
+      "usage": {
+        "input_tokens": 134,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 70139,
+        "output_tokens": 36189,
+        "service_tier": "standard"
+      },
+      "wall_seconds": 171.684017,
+      "exit_code": 0,
+      "reasoning_chars": 93260,
+      "live": true,
+      "game_line": "Pac-Man (or a small Pac-Man-like variant; likely Pac-Man rather than Ms. Pac-Man).",
+      "guess": "pacman",
+      "correct": true,
+      "confidence": 92.0
+    }
+  },
+  {
+    "id": "0bbcc3ea",
+    "game": "freeway",
+    "changed_request_fields": [
+      "max_tokens"
+    ],
+    "old": {
+      "id": "0bbcc3ea",
+      "true": "freeway",
+      "returned_model": "deepseek-flash",
+      "stop_reason": "max_tokens",
+      "usage": {
+        "input_tokens": 69093,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 1152,
+        "output_tokens": 32768,
+        "service_tier": "standard"
+      },
+      "wall_seconds": 175.744818,
+      "exit_code": 1,
+      "reasoning_chars": 94374,
+      "live": true,
+      "game_line": "",
+      "guess": null,
+      "correct": false,
+      "confidence": null
+    },
+    "new": {
+      "id": "0bbcc3ea",
+      "true": "freeway",
+      "returned_model": "deepseek-flash",
+      "stop_reason": "end_turn",
+      "usage": {
+        "input_tokens": 229,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 70016,
+        "output_tokens": 53833,
+        "service_tier": "standard"
+      },
+      "wall_seconds": 278.655982,
+      "exit_code": 0,
+      "reasoning_chars": 152079,
+      "live": true,
+      "game_line": "Breakout (or an Arkanoid-style brick-breaker game).",
+      "guess": "breakout",
+      "correct": false,
+      "confidence": 88.0
+    }
+  }
+]
