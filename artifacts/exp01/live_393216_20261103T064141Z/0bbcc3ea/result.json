@@ -1,0 +1,21 @@
+{
+  "id": "0bbcc3ea",
+  "true": "freeway",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 229,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 70016,
+    "output_tokens": 88723,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 465.234841,
+  "exit_code": 0,
+  "reasoning_chars": 245414,
+  "live": true,
+  "game_line": "Frogger** — more specifically, a small grid-based Frogger-like game.",
+  "guess": "freeway",
+  "correct": true,
+  "confidence": 82.0
+}

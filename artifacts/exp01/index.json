@@ -1,0 +1,1045 @@
+[
+  {
+    "batch": "live_20261103T053114Z",
+    "id": "a9f535cc",
+    "true": "breakout",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 70299,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 30785,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 179.194073,
+    "exit_code": 0,
+    "reasoning_chars": 94566,
+    "live": true,
+    "game_line": "Breakout—a simplified/10×10-grid version of Atari Breakout.",
+    "guess": "breakout",
+    "correct": true,
+    "confidence": 96.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "8705dc6d21197a2299444b24014d4cf1ef14700a4480219d9fb9827b69c9dcb9",
+        "original_bytes": 95608
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "6b69ab1b1f96a3e2cedadbf083a774396652e211fc22c6040cff69cadacccecb",
+        "original_bytes": 2835
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "876bdfd10cdc02f6abebe5161fc1543754ee1c9fd00495582f8702958a78661c",
+        "original_bytes": 544
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "955d3aa37985fb2754b93bc853d23b21795b84495d48b69956c5bab400f9041a",
+        "original_bytes": 258
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "0c32d9a6126bb98d092ffbb3796246486dd2c5bbbfe252c3edcda59e5fb3ee5f",
+        "original_bytes": 3879475
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "89c475bf76609947e46f87e8f26f7b561e4f56cee9ce36e8a8a954e9fa350fff",
+        "original_bytes": 116468
+      }
+    ]
+  },
+  {
+    "batch": "live_20261103T053114Z",
+    "id": "dfc6cb65",
+    "true": "pong",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 69121,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 1152,
+      "output_tokens": 23508,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 120.605397,
+    "exit_code": 0,
+    "reasoning_chars": 59904,
+    "live": true,
+    "game_line": "Pong, specifically a Pong-like tennis game on a 10×10 grid with an 8×8 playable interior.",
+    "guess": "pong",
+    "correct": true,
+    "confidence": 94.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "98d6490e49ed095ca2131505346c2fcf297a9debc9964811db11ba48d96f17bc",
+        "original_bytes": 60705
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "b93273fa1a708667d75a92309c89209a9bdcc3ea552d441b3c7b0b6dfe7fb46b",
+        "original_bytes": 3433
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "77b7ca80b854d7feb2e2009814ed4897273a07246888c76611fd681b6d58048d",
+        "original_bytes": 568
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "fe6dbd8398068223787241f30bbe497ca4bede0d9962e73ae7dbb11318f274d9",
+        "original_bytes": 254
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "a2f664b4cedfc563220d565257665f6787068ede27acecfb682f69b8695049cf",
+        "original_bytes": 2948657
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "78b669067b27eab99ea16c8e6edb36c507de4dcf80ab267b0e708f97a7a72e38",
+        "original_bytes": 116259
+      }
+    ]
+  },
+  {
+    "batch": "live_20261103T053114Z",
+    "id": "bdf99279",
+    "true": "pacman",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 69505,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 768,
+      "output_tokens": 29337,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 148.054874,
+    "exit_code": 0,
+    "reasoning_chars": 75662,
+    "live": true,
+    "game_line": "Pac-Man (a small grid Pac-Man-style maze game; most likely the Pac-Man environment rather than Ms. Pac-Man).",
+    "guess": "pacman",
+    "correct": true,
+    "confidence": 93.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "cf003e4d2ee74c2cfae669f4756ea884424baedf0667a1a2845798962d775346",
+        "original_bytes": 76658
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "de4ba382b29bda445a3a5c7b0c01432075ecd297053cd8632dbad64b24e8421f",
+        "original_bytes": 2300
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "a52df27c72117f166efc9d840a5a79a886dea6bab4e5d91c78340bb3f8522a7d",
+        "original_bytes": 588
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "b8b51867e51c3c38fa33fd420fe491f721efe936b912a41bd0d2b5d330754cf3",
+        "original_bytes": 256
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "97c030db6c8fefd34056a0a7e7c82861b0847d9e78881f61de3f168f25dfa761",
+        "original_bytes": 3683348
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "f3aefb6214e7b708a010f215d5e87d47fa898b14e7771a55dab8b178e75d1b83",
+        "original_bytes": 116384
+      }
+    ]
+  },
+  {
+    "batch": "live_20261103T053114Z",
+    "id": "0bbcc3ea",
+    "true": "freeway",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "max_tokens",
+    "usage": {
+      "input_tokens": 69093,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 1152,
+      "output_tokens": 32768,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 175.744818,
+    "exit_code": 1,
+    "reasoning_chars": 94374,
+    "live": true,
+    "game_line": "",
+    "guess": null,
+    "correct": false,
+    "confidence": null,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "31b4e24792812404c035faac95cb955162a19d50b51d1b460cf9ea33474d2758",
+        "original_bytes": 95174
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_bytes": 0
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "5c995032cee45fdc17c1263c21a00c77cf5db0fa6bb1ee518abc26a2194790c5",
+        "original_bytes": 481
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "41f8567eb79283b9a58d83094400971b0eff923f0cbe94e32ed516e610246ed3",
+        "original_bytes": 257
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "85ffb89ab5969942e09f04dc6441896fc823c596d935d50d70459a78e9845eee",
+        "original_bytes": 4127218
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "38394fc3f262d2d6452a7a13c1bdb5e70efe896d78041eb8cc2b7922f27458b4",
+        "original_bytes": 116249
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T055320Z",
+    "id": "a9f535cc",
+    "true": "breakout",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 155,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 70144,
+      "output_tokens": 24263,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 118.047714,
+    "exit_code": 0,
+    "reasoning_chars": 61549,
+    "live": true,
+    "game_line": "Breakout / brick-breaker (a simplified Atari Breakout-like grid game).",
+    "guess": "breakout",
+    "correct": true,
+    "confidence": 95.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "d66b01126282ef0006134d5565938a2c337d5264860dc4528d2e0594d4e0d2e9",
+        "original_bytes": 62379
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "eb046f810fe8abe70136cd985e06b448ef3a18c06c8efa3f4be6221491c0a45d",
+        "original_bytes": 3098
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "547c1def18b2aef40542f501c060681b01fd2e2a036a51e60916dda857e1715b",
+        "original_bytes": 554
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "955d3aa37985fb2754b93bc853d23b21795b84495d48b69956c5bab400f9041a",
+        "original_bytes": 258
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "990f35fb246b824d367632bd6aa7353cf01e4f09bb097a6367877f318e7fe258",
+        "original_bytes": 3043549
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "bfdbef07a0c1137b87406aeeeaedc7b582803985e40e1741f2d409045be9f81c",
+        "original_bytes": 116469
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T055320Z",
+    "id": "dfc6cb65",
+    "true": "pong",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 134,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 70139,
+      "output_tokens": 46885,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 243.138607,
+    "exit_code": 0,
+    "reasoning_chars": 128324,
+    "live": true,
+    "game_line": "Pong (Atari-style Pong).",
+    "guess": "pong",
+    "correct": true,
+    "confidence": 98.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "0609de5b71337005914e5cf8b9d8e0bc2e447ccb572336124ddfc0ed10b36d32",
+        "original_bytes": 130033
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "1821b6d2ef2a2d56b34232bf83c4e959399d942c299812a00478374911f2cf4a",
+        "original_bytes": 2946
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "161798a64a89fb953e4574d2fc0f6d37a17d3e896dbd2ef33d7943f7c480ae9d",
+        "original_bytes": 501
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "fe6dbd8398068223787241f30bbe497ca4bede0d9962e73ae7dbb11318f274d9",
+        "original_bytes": 254
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "fbbb91cf2004a9b9e544b293b67c20b9208fc02809661815b15463f6e80024c0",
+        "original_bytes": 5894297
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "2e9b9422511e2faa3756cc9f45b89d77a33ae9aae5bb1e72778b119ebf95e7b8",
+        "original_bytes": 116260
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T055320Z",
+    "id": "bdf99279",
+    "true": "pacman",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 134,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 70139,
+      "output_tokens": 36189,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 171.684017,
+    "exit_code": 0,
+    "reasoning_chars": 93260,
+    "live": true,
+    "game_line": "Pac-Man (or a small Pac-Man-like variant; likely Pac-Man rather than Ms. Pac-Man).",
+    "guess": "pacman",
+    "correct": true,
+    "confidence": 92.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "efc79e11ac9356cfc7d71b2b688763f41c3b6b5e1b4389fc43f04ca77b07258a",
+        "original_bytes": 94448
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "825d85d630a8a3de5cf6e18b224ca465b041d53bdd88efd215069d2bae9a57fa",
+        "original_bytes": 3158
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "76ef70f779bffefaac8d13b42094c6f1e61dc955d5711081ae8d4fd0b03ffdce",
+        "original_bytes": 562
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "b8b51867e51c3c38fa33fd420fe491f721efe936b912a41bd0d2b5d330754cf3",
+        "original_bytes": 256
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "76b62d20b50f7cadcc8c261151ccc4c3bd1be7b0c4283925199588f4366b71d1",
+        "original_bytes": 4542316
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "7dc8c1dd5d8a69f35a023e61dc753ee36e47ace39d82e27d6b4985d3834ae8e8",
+        "original_bytes": 116385
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T055320Z",
+    "id": "0bbcc3ea",
+    "true": "freeway",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 229,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 70016,
+      "output_tokens": 53833,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 278.655982,
+    "exit_code": 0,
+    "reasoning_chars": 152079,
+    "live": true,
+    "game_line": "Breakout (or an Arkanoid-style brick-breaker game).",
+    "guess": "breakout",
+    "correct": false,
+    "confidence": 88.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "bc320cd237a2c5252e80127261aac9db8e455e26f39588edb871a4e6711a121c",
+        "original_bytes": 153234
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "baec7920e3ba0a5e8a05c4d36fe47204aa176c14f75da519b0669e33dbce6dac",
+        "original_bytes": 2940
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "a6c7a5981b8e1cc01c37761a9a6ec322239654a9033eea6884e67a70a0e5ab40",
+        "original_bytes": 536
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "41f8567eb79283b9a58d83094400971b0eff923f0cbe94e32ed516e610246ed3",
+        "original_bytes": 257
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "8ae658f02c1b029ef417546255dbaed66681bda5c4c749b997b26c80e683be67",
+        "original_bytes": 6772647
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "51bcaf2b2118c9c5534caa4e0e1581010713b948624e9e12e63b12d0ac05f65f",
+        "original_bytes": 116250
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T064141Z",
+    "id": "0bbcc3ea",
+    "true": "freeway",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 229,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 70016,
+      "output_tokens": 88723,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 465.234841,
+    "exit_code": 0,
+    "reasoning_chars": 245414,
+    "live": true,
+    "game_line": "Frogger** — more specifically, a small grid-based Frogger-like game.",
+    "guess": "freeway",
+    "correct": true,
+    "confidence": 82.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "60a15f0864e52efe220d087564274eedca8bd4991f37543148cd3b913dcd7eae",
+        "original_bytes": 246621
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "02720aaefe6de64a224d911bb56724796af17013e06bb387bbc053f5f1c41ecc",
+        "original_bytes": 2869
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "a8f5ea316caf28aeb5b44e196d14f361b513472102c95dd8a396031847c93bb9",
+        "original_bytes": 553
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "41f8567eb79283b9a58d83094400971b0eff923f0cbe94e32ed516e610246ed3",
+        "original_bytes": 257
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "550c2896f05fc3724808d137b8a938378b99f6c84c7319179b79b515b0dddca3",
+        "original_bytes": 11157148
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "51bcaf2b2118c9c5534caa4e0e1581010713b948624e9e12e63b12d0ac05f65f",
+        "original_bytes": 116250
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T082916Z",
+    "id": "a9f535cc",
+    "true": "breakout",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 70274,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 625,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 12.18788,
+    "exit_code": 0,
+    "reasoning_chars": 0,
+    "live": true,
+    "game_line": "Snake (e.g. classic Nokia/simple grid Snake) on an 8×8 board.",
+    "guess": null,
+    "correct": false,
+    "confidence": 72.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_bytes": 0
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "1e0d4ac4e957bb3da0aaf0886de0ddeae4139dad857fa3f6876a82ac965c1f77",
+        "original_bytes": 2453
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "2d30c15c5ca4e23badefca558c7d2c53aae11fd846223cd3fcd4b2d64d757430",
+        "original_bytes": 531
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "955d3aa37985fb2754b93bc853d23b21795b84495d48b69956c5bab400f9041a",
+        "original_bytes": 258
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "5aa3f9e4cd37609fac0b7b3f8c26fec60b4fc60a16cf7267df0192e277d1d9b2",
+        "original_bytes": 75208
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "985327a9268f25d219ea9dd6f956534df7a15e5fe317608f647f08923337b672",
+        "original_bytes": 116420
+      },
+      {
+        "file": "client_request.json.gz",
+        "original_sha256": "bfdbef07a0c1137b87406aeeeaedc7b582803985e40e1741f2d409045be9f81c",
+        "original_bytes": 116469
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T082916Z",
+    "id": "dfc6cb65",
+    "true": "pong",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 69224,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 1024,
+      "output_tokens": 818,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 14.202878,
+    "exit_code": 0,
+    "reasoning_chars": 0,
+    "live": true,
+    "game_line": "Catch (falling-object catching game; paddle at the bottom, objects fall from the top).",
+    "guess": null,
+    "correct": false,
+    "confidence": 62.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_bytes": 0
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "f34c618d10a47715f10603c57de04c481f1210d13a497d7f557fce9506658214",
+        "original_bytes": 3401
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "54ab7b164020dc866de659365e18490fa4275207ba9ccc2803fd2a2a9524288b",
+        "original_bytes": 555
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "fe6dbd8398068223787241f30bbe497ca4bede0d9962e73ae7dbb11318f274d9",
+        "original_bytes": 254
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "fccd1e33eab52252dab5c91c7668171ee87eb63380fe534f21058ce2cdcaab3a",
+        "original_bytes": 98365
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "2c37086a614d3aec0841161cb3a57e29d0e2591561db037482dc28e482910079",
+        "original_bytes": 116211
+      },
+      {
+        "file": "client_request.json.gz",
+        "original_sha256": "2e9b9422511e2faa3756cc9f45b89d77a33ae9aae5bb1e72778b119ebf95e7b8",
+        "original_bytes": 116260
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T082916Z",
+    "id": "bdf99279",
+    "true": "pacman",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 69608,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 640,
+      "output_tokens": 683,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 13.081148,
+    "exit_code": 0,
+    "reasoning_chars": 0,
+    "live": true,
+    "game_line": "Snake (single-agent, grid-based, on an 8×8 playable area with a wall border).",
+    "guess": null,
+    "correct": false,
+    "confidence": 55.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_bytes": 0
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "8c0fa9589bcf62010d1eb7a23c3cb06d23998c7f86640ae2aeeb1c4b0f46f7c7",
+        "original_bytes": 2956
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "80e8a98a25249f6f9c5d4f40418c3717960ab9ec64eb184ad04db8059bbdcbe9",
+        "original_bytes": 548
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "b8b51867e51c3c38fa33fd420fe491f721efe936b912a41bd0d2b5d330754cf3",
+        "original_bytes": 256
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "3ff0d274f2fa9e8077b19e43436b7aad2481c84527dbb1412c3c269a94c0d831",
+        "original_bytes": 82385
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "3b11cca09b00cbebbfb5345aa53ce6ecb6b3b4aac30f046c7633994bd3e1c928",
+        "original_bytes": 116336
+      },
+      {
+        "file": "client_request.json.gz",
+        "original_sha256": "7dc8c1dd5d8a69f35a023e61dc753ee36e47ace39d82e27d6b4985d3834ae8e8",
+        "original_bytes": 116385
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T082916Z",
+    "id": "0bbcc3ea",
+    "true": "freeway",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 69196,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 1024,
+      "output_tokens": 1528,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 17.149384,
+    "exit_code": 0,
+    "reasoning_chars": 0,
+    "live": true,
+    "game_line": "A vertical platform/jump game in the Donkey Kong / \"climb-the-corridor, jump the obstacles\" family — most specifically a single-lane upward climbing/jumping game (agent moves up a vertical strip, jumping obstacles, with right/left blocked by walls).",
+    "guess": null,
+    "correct": false,
+    "confidence": 38.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "original_bytes": 0
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "d484aa25ad41fbb53811233a1b0d2e229a7ccb7cc31bab238fa7d305e236fc4c",
+        "original_bytes": 5173
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "e5c68838650fbf0cfcb710a2a5cc40fdecd96656a38af7a2ba1694eacad26889",
+        "original_bytes": 726
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "41f8567eb79283b9a58d83094400971b0eff923f0cbe94e32ed516e610246ed3",
+        "original_bytes": 257
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "d935a273d2b24da0d1398706fac55aa5d05c8efff55085d08f7bdf5c8ae839c4",
+        "original_bytes": 181846
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "716f501b41a715d70b259add0c95376b10f06836ba25c8531b004604a8310cc9",
+        "original_bytes": 116201
+      },
+      {
+        "file": "client_request.json.gz",
+        "original_sha256": "51bcaf2b2118c9c5534caa4e0e1581010713b948624e9e12e63b12d0ac05f65f",
+        "original_bytes": 116250
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T113950Z",
+    "id": "a9f535cc",
+    "true": "breakout",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 70299,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 40413,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 236.64172,
+    "exit_code": 0,
+    "reasoning_chars": 123575,
+    "live": true,
+    "game_line": "Breakout, specifically an Atari-style/mini-grid Breakout or brick-breaker.",
+    "guess": "breakout",
+    "correct": true,
+    "confidence": 95.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "fc84fc5be49ea1b598773fb5b99fa123c06a32cdbcde730384670964529719ba",
+        "original_bytes": 125139
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "3249958595adbeacd64eccf8831a0d174baea4191bdb6d6d21b24a0cbd3b24b0",
+        "original_bytes": 3658
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "77141f6681b992d3be4564f75f6f737a7c7d276b3043cadfcc24fcf75980022d",
+        "original_bytes": 556
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "955d3aa37985fb2754b93bc853d23b21795b84495d48b69956c5bab400f9041a",
+        "original_bytes": 258
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "e6f4fc2a790df7c7aa30ed979e00e083d24433a260348ba49957c6c346c5a55d",
+        "original_bytes": 5092603
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "9146d2cbdd7a6d96f64481e96487492a244e18c66a3d31440016fce904221338",
+        "original_bytes": 116468
+      },
+      {
+        "file": "client_request.json.gz",
+        "original_sha256": "bfdbef07a0c1137b87406aeeeaedc7b582803985e40e1741f2d409045be9f81c",
+        "original_bytes": 116469
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T113950Z",
+    "id": "dfc6cb65",
+    "true": "pong",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 69121,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 1152,
+      "output_tokens": 34960,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 187.344296,
+    "exit_code": 0,
+    "reasoning_chars": 97394,
+    "live": true,
+    "game_line": "Pong (a Pong/tennis-style one-player paddle game).",
+    "guess": "pong",
+    "correct": true,
+    "confidence": 95.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "171ac127347bc9bd2e4b0dc959bc57f27071e72b9bf8e58609876fb3e641fe1d",
+        "original_bytes": 99014
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "f5d737a1e3bf1adb5215b50924a18920bb8c6953d87e707cece8193941e7d950",
+        "original_bytes": 3829
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "106e9270f33354da5d253f2266bc7ae37c54bd7628112971e5ce0d5503337b8b",
+        "original_bytes": 527
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "fe6dbd8398068223787241f30bbe497ca4bede0d9962e73ae7dbb11318f274d9",
+        "original_bytes": 254
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "639395df38a71b002b02fb8e59a9b37a171c3e004c2e7b090518ca79a2c6cb6b",
+        "original_bytes": 4395112
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "cd402aedf618306412b50c690bc932bbbc3680d69a7ed94cd741f163618c3a84",
+        "original_bytes": 116259
+      },
+      {
+        "file": "client_request.json.gz",
+        "original_sha256": "2e9b9422511e2faa3756cc9f45b89d77a33ae9aae5bb1e72778b119ebf95e7b8",
+        "original_bytes": 116260
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T113950Z",
+    "id": "bdf99279",
+    "true": "pacman",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 69505,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 768,
+      "output_tokens": 90513,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 560.022968,
+    "exit_code": 0,
+    "reasoning_chars": 302168,
+    "live": true,
+    "game_line": "Asterix** (the Atari 2600 / MinAtar-style Asterix).",
+    "guess": null,
+    "correct": false,
+    "confidence": 78.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "e912537d37ca94f748ccd8767eb3d67b9b20f20cbc5a82e22d510921e1c8365a",
+        "original_bytes": 305569
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "6e19ca1bcddd37f33cbf99c916ae82546e2df745a53217598481888e152400c2",
+        "original_bytes": 3002
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "ad43db3aeaef0d74345c1c65029e535efe61000054c71a96a8e7f728fb45add0",
+        "original_bytes": 529
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "b8b51867e51c3c38fa33fd420fe491f721efe936b912a41bd0d2b5d330754cf3",
+        "original_bytes": 256
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "e9cd24eb74ce57376dae63becb86dd0508efe3db154847db38063cbc137928fd",
+        "original_bytes": 11436369
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "29f32d18ff8d9d2496b456b9486b66d95bd560a38ccc6908a02ac24fce09dd4e",
+        "original_bytes": 116384
+      },
+      {
+        "file": "client_request.json.gz",
+        "original_sha256": "7dc8c1dd5d8a69f35a023e61dc753ee36e47ace39d82e27d6b4985d3834ae8e8",
+        "original_bytes": 116385
+      }
+    ]
+  },
+  {
+    "batch": "live_393216_20261103T113950Z",
+    "id": "0bbcc3ea",
+    "true": "freeway",
+    "returned_model": "deepseek-flash",
+    "stop_reason": "end_turn",
+    "usage": {
+      "input_tokens": 69093,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 1152,
+      "output_tokens": 46036,
+      "service_tier": "standard"
+    },
+    "wall_seconds": 264.247725,
+    "exit_code": 0,
+    "reasoning_chars": 136988,
+    "live": true,
+    "game_line": "Freeway (Atari-style chicken crossing a busy highway; essentially a simplified Frogger-like road-crossing game).",
+    "guess": "freeway",
+    "correct": true,
+    "confidence": 88.0,
+    "files": [
+      {
+        "file": "reasoning.md",
+        "original_sha256": "fc9bf8df9ccc0aab8b885d4f9406b1c05efcffdcb97d4139d88b7c831af5cb0b",
+        "original_bytes": 138633
+      },
+      {
+        "file": "answer.md",
+        "original_sha256": "8818fe8df49699db232ac584758b946eca0cb346f2e9cfd12c9082c403b6df91",
+        "original_bytes": 3453
+      },
+      {
+        "file": "result.json",
+        "original_sha256": "4a42bceb003ee628bde3a9734c3fbca7e95ee0e357fe83a44ab8241f4169236c",
+        "original_bytes": 596
+      },
+      {
+        "file": "audit.json",
+        "original_sha256": "4edcbad72ac8066bd569f815a282b21fcd6965a563c6008ff19e8e101e421392",
+        "original_bytes": 100
+      },
+      {
+        "file": "source.json",
+        "original_sha256": "41f8567eb79283b9a58d83094400971b0eff923f0cbe94e32ed516e610246ed3",
+        "original_bytes": 257
+      },
+      {
+        "file": "response.sse.gz",
+        "original_sha256": "1d967c1b914ae4344c3adc3d9e9c09f6a71630ba6fb257d74acf93dada48f20e",
+        "original_bytes": 5798123
+      },
+      {
+        "file": "request.json.gz",
+        "original_sha256": "34e458eaf14264ec25d9839d6f01dd9c18795e9fc333dae2619cba97b966aa69",
+        "original_bytes": 116249
+      },
+      {
+        "file": "client_request.json.gz",
+        "original_sha256": "51bcaf2b2118c9c5534caa4e0e1581010713b948624e9e12e63b12d0ac05f65f",
+        "original_bytes": 116250
+      }
+    ]
+  }
+]

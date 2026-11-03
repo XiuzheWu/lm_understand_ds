@@ -1,0 +1,21 @@
+{
+  "id": "dfc6cb65",
+  "true": "pong",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 134,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 70139,
+    "output_tokens": 46885,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 243.138607,
+  "exit_code": 0,
+  "reasoning_chars": 128324,
+  "live": true,
+  "game_line": "Pong (Atari-style Pong).",
+  "guess": "pong",
+  "correct": true,
+  "confidence": 98.0
+}

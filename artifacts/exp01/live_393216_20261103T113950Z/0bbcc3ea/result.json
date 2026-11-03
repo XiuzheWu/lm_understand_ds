@@ -1,0 +1,21 @@
+{
+  "id": "0bbcc3ea",
+  "true": "freeway",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 69093,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 1152,
+    "output_tokens": 46036,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 264.247725,
+  "exit_code": 0,
+  "reasoning_chars": 136988,
+  "live": true,
+  "game_line": "Freeway (Atari-style chicken crossing a busy highway; essentially a simplified Frogger-like road-crossing game).",
+  "guess": "freeway",
+  "correct": true,
+  "confidence": 88.0
+}

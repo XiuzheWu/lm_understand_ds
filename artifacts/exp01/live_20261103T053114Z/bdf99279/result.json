@@ -1,0 +1,21 @@
+{
+  "id": "bdf99279",
+  "true": "pacman",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 69505,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 768,
+    "output_tokens": 29337,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 148.054874,
+  "exit_code": 0,
+  "reasoning_chars": 75662,
+  "live": true,
+  "game_line": "Pac-Man (a small grid Pac-Man-style maze game; most likely the Pac-Man environment rather than Ms. Pac-Man).",
+  "guess": "pacman",
+  "correct": true,
+  "confidence": 93.0
+}

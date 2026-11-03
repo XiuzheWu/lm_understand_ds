@@ -1,0 +1,21 @@
+{
+  "id": "0bbcc3ea",
+  "true": "freeway",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 69196,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 1024,
+    "output_tokens": 1528,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 17.149384,
+  "exit_code": 0,
+  "reasoning_chars": 0,
+  "live": true,
+  "game_line": "A vertical platform/jump game in the Donkey Kong / \"climb-the-corridor, jump the obstacles\" family — most specifically a single-lane upward climbing/jumping game (agent moves up a vertical strip, jumping obstacles, with right/left blocked by walls).",
+  "guess": null,
+  "correct": false,
+  "confidence": 38.0
+}

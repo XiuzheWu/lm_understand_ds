@@ -1,0 +1,21 @@
+{
+  "id": "bdf99279",
+  "true": "pacman",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 69505,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 768,
+    "output_tokens": 90513,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 560.022968,
+  "exit_code": 0,
+  "reasoning_chars": 302168,
+  "live": true,
+  "game_line": "Asterix** (the Atari 2600 / MinAtar-style Asterix).",
+  "guess": null,
+  "correct": false,
+  "confidence": 78.0
+}

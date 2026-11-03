@@ -1,0 +1,21 @@
+{
+  "id": "a9f535cc",
+  "true": "breakout",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 155,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 70144,
+    "output_tokens": 24263,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 118.047714,
+  "exit_code": 0,
+  "reasoning_chars": 61549,
+  "live": true,
+  "game_line": "Breakout / brick-breaker (a simplified Atari Breakout-like grid game).",
+  "guess": "breakout",
+  "correct": true,
+  "confidence": 95.0
+}

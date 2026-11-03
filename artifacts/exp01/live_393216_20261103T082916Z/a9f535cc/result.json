@@ -1,0 +1,21 @@
+{
+  "id": "a9f535cc",
+  "true": "breakout",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 70274,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 625,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 12.18788,
+  "exit_code": 0,
+  "reasoning_chars": 0,
+  "live": true,
+  "game_line": "Snake (e.g. classic Nokia/simple grid Snake) on an 8×8 board.",
+  "guess": null,
+  "correct": false,
+  "confidence": 72.0
+}

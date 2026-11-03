@@ -1,0 +1,21 @@
+{
+  "id": "dfc6cb65",
+  "true": "pong",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 69121,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 1152,
+    "output_tokens": 34960,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 187.344296,
+  "exit_code": 0,
+  "reasoning_chars": 97394,
+  "live": true,
+  "game_line": "Pong (a Pong/tennis-style one-player paddle game).",
+  "guess": "pong",
+  "correct": true,
+  "confidence": 95.0
+}

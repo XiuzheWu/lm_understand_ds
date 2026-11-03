@@ -1,0 +1,21 @@
+{
+  "id": "dfc6cb65",
+  "true": "pong",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 69224,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 1024,
+    "output_tokens": 818,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 14.202878,
+  "exit_code": 0,
+  "reasoning_chars": 0,
+  "live": true,
+  "game_line": "Catch (falling-object catching game; paddle at the bottom, objects fall from the top).",
+  "guess": null,
+  "correct": false,
+  "confidence": 62.0
+}

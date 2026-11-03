@@ -1,0 +1,21 @@
+{
+  "id": "bdf99279",
+  "true": "pacman",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 134,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 70139,
+    "output_tokens": 36189,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 171.684017,
+  "exit_code": 0,
+  "reasoning_chars": 93260,
+  "live": true,
+  "game_line": "Pac-Man (or a small Pac-Man-like variant; likely Pac-Man rather than Ms. Pac-Man).",
+  "guess": "pacman",
+  "correct": true,
+  "confidence": 92.0
+}

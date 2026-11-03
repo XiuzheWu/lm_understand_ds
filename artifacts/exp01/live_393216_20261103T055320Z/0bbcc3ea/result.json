@@ -1,0 +1,21 @@
+{
+  "id": "0bbcc3ea",
+  "true": "freeway",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 229,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 70016,
+    "output_tokens": 53833,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 278.655982,
+  "exit_code": 0,
+  "reasoning_chars": 152079,
+  "live": true,
+  "game_line": "Breakout (or an Arkanoid-style brick-breaker game).",
+  "guess": "breakout",
+  "correct": false,
+  "confidence": 88.0
+}

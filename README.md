@@ -1,16 +1,19 @@
 # lm_understand_ds
 
-DeepSeek Flash + High 对 Weight-Space Programming 原实验的协议级复现与推理轨迹分析。
+DeepSeek Flash 对 Weight-Space Programming 实验一的复现与可见推理分析。
 
-- [研究方案 v3](RESEARCH_PLAN.md)
-- [Pilot 配置清单](protocol/pilot_manifest.json)
-- [复现差异登记](protocol/replication_differences.md)
-- [轨迹标注规范](protocol/trajectory_annotation.md)
+截至2026-11-04：完成17次正式调用，覆盖High两种输出预算、Freeway独立重跑、关闭thinking及Max。全部无工具、使用原作者提示。
 
-首期：原任务提示、自定义 DeepSeek Harness 模式、自建实验 Harness、隔离 Python Sandbox；优先保存并分析 reasoning_content、代码与反馈。后续再比较推理强度和 System Prompt。
+- [全部实验分析](reports/exp01_all_runs_synthesis.md)
+- [完整结果与文件哈希索引](artifacts/exp01/index.json)
+- [归档说明](artifacts/exp01/README.md)
+- [Max最终验收](reports/exp01_max_final_acceptance.md)
+- [关闭thinking分析](reports/exp01_no_thinking_analysis.md)
+- [High完整批次比较](reports/exp01_output_budget_comparison.md)
+- [Freeway重跑分析](reports/exp01_freeway_rerun_comparison.md)
+- [研究方案（历史规划，不等同已实施内容）](RESEARCH_PLAN.md)
+- [实验运行器](src/exp01.py)
 
-**当前状态：仅完成方案与仓库初始化；尚未实现实验运行器，未运行模型实验。**
+High与Max完整批次均3/4，关闭thinking为0/4。正确标签不等于准确机制解释；详细限制见综合报告。Max阶段验收为历史快照，现以最终报告为准。
 
-本地工作目录：`H:\lm_understand_ds`。`data/`、`runs/` 和认证信息不默认提交。付费批量任务前必须完成协议、接口及预算核验。
-
-原研究：[博客](https://rikiyat.github.io/blog/weight-space-programming/) · [实验日志](https://github.com/RikiyaT/lm_understand-logs)。
+原研究及数据来源：[原作者日志](https://github.com/RikiyaT/lm_understand-logs)；固定commit `4d09ba6d6a7e891dd8063974dfe81b3d78e3494f`。本地工作目录 `H:/lm_understand_ds`。认证信息、依赖和mock不提交。

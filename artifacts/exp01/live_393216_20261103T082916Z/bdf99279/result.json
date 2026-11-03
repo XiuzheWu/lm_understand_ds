@@ -1,0 +1,21 @@
+{
+  "id": "bdf99279",
+  "true": "pacman",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 69608,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 640,
+    "output_tokens": 683,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 13.081148,
+  "exit_code": 0,
+  "reasoning_chars": 0,
+  "live": true,
+  "game_line": "Snake (single-agent, grid-based, on an 8×8 playable area with a wall border).",
+  "guess": null,
+  "correct": false,
+  "confidence": 55.0
+}

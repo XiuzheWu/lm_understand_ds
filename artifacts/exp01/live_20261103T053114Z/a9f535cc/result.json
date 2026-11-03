@@ -1,0 +1,21 @@
+{
+  "id": "a9f535cc",
+  "true": "breakout",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 70299,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 30785,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 179.194073,
+  "exit_code": 0,
+  "reasoning_chars": 94566,
+  "live": true,
+  "game_line": "Breakout—a simplified/10×10-grid version of Atari Breakout.",
+  "guess": "breakout",
+  "correct": true,
+  "confidence": 96.0
+}

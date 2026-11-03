@@ -1,0 +1,14 @@
+{
+  "upstream_commit": "4d09ba6d6a7e891dd8063974dfe81b3d78e3494f",
+  "model": "deepseek-flash",
+  "effort": "high",
+  "max_output_tokens": 32768,
+  "live": true,
+  "max_inference_calls": 4,
+  "automatic_retries": 0,
+  "client": "DSH 0.2.1-rc.5",
+  "transport": "Anthropic Messages through audited loopback gateway",
+  "sampling": "provider default; no top_p override in installed transport",
+  "batch_budget_usd": 1.0,
+  "timestamp_utc": "20261103T053114Z"
+}

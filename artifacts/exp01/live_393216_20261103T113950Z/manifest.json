@@ -1,0 +1,22 @@
+{
+  "upstream_commit": "4d09ba6d6a7e891dd8063974dfe81b3d78e3494f",
+  "model": "deepseek-flash",
+  "effort": "high",
+  "thinking": "enabled",
+  "max_output_tokens": 393216,
+  "live": true,
+  "max_inference_calls": 4,
+  "cases": [
+    "breakout",
+    "pong",
+    "pacman",
+    "freeway"
+  ],
+  "automatic_retries": 0,
+  "client": "DSH 0.2.1-rc.5",
+  "transport": "Anthropic Messages through audited loopback gateway",
+  "sampling": "provider default; no top_p override in installed transport",
+  "cost_estimate_ceiling_usd": 3.0,
+  "wall_time_limit_seconds": null,
+  "timestamp_utc": "20261103T113950Z"
+}

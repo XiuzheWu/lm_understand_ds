@@ -30,7 +30,7 @@ def key_from_environment():
         except FileNotFoundError: pass
     return value.strip()
 
-def overlay(path, port, max_tokens):
+def overlay(path, port, max_tokens, thinking="enabled"):
     default = (ROOT / 'configs/dsh-headless-base.yml').read_text(encoding='utf-8-sig')
     ids = re.findall(r'^- id: (.+)$', default, re.M)
     keep = set('timer llm session typert agent agent-default-model jobs session-persistence-jsonl session-projection storage storage-json storage-domain session-projection-cache tools system-prompt agent-loop llm-deepseek headless-startup headless-runner'.split())
@@ -48,8 +48,8 @@ def overlay(path, port, max_tokens):
 - id: llm-deepseek
   config:
     baseURL: http://127.0.0.1:{port}
-    thinking: enabled
-    reasoningEffort: high
+    thinking: {thinking}
+    reasoningEffort: {"high" if thinking == "enabled" else "off"}
     maxTokens: {max_tokens}
     streamIdleTimeoutMs: 300000
     retryPolicy:
@@ -93,6 +93,9 @@ def main():
     p=argparse.ArgumentParser(); p.add_argument('--live', action='store_true')
     p.add_argument('--max-output-tokens', type=int, choices=[32768,393216], default=32768)
     p.add_argument('--case', choices=[g for _, g in CASES], help='Run one case in a fresh batch')
+    p.add_argument('--thinking', choices=['enabled','disabled'], default='enabled')
+    p.add_argument('--no-thinking', action='store_true')
+    p.add_argument('--effort', choices=['high','max'], default='high')
     args=p.parse_args()
     cases = [(n, g) for n, g in CASES if args.case is None or g == args.case]
     upstream_commit=subprocess.check_output(['git','-C',str(UPSTREAM),'rev-parse','HEAD'],text=True).strip()
@@ -103,15 +106,25 @@ def main():
     key = key_from_environment() if args.live else 'sk-mock-not-a-real-key'
     if not key: raise SystemExit('MISSING_DEEPSEEK_API_KEY: configure Windows user environment, then retry.')
     stamp=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
-    batch=ROOT / 'runs/exp01' / (('live_' if args.live else 'mock_')+str(args.max_output_tokens)+'_'+stamp)
+    batch=ROOT / 'runs/exp01' / (('live_' if args.live else 'mock_')+str(args.max_output_tokens)+('_nothinking' if args.thinking == 'disabled' else '')+'_'+stamp)
     batch.mkdir(parents=True, exist_ok=False)
-    dump(batch/'manifest.json',{'upstream_commit':upstream_commit,'model':'deepseek-flash','effort':'high','max_output_tokens':args.max_output_tokens,'live':args.live,'max_inference_calls':len(cases),'cases':[g for _, g in cases],'automatic_retries':0,'client':'DSH 0.2.1-rc.5','transport':'Anthropic Messages through audited loopback gateway','sampling':'provider default; no top_p override in installed transport','cost_estimate_ceiling_usd':3.0 if args.max_output_tokens>32768 else 1.0,'wall_time_limit_seconds':None if args.max_output_tokens>32768 else 1200,'timestamp_utc':stamp})
+    dump(batch/'manifest.json',{'upstream_commit':upstream_commit,'model':'deepseek-flash','effort':'high' if args.thinking == 'enabled' else 'off','thinking':args.thinking,'max_output_tokens':args.max_output_tokens,'live':args.live,'max_inference_calls':len(cases),'cases':[g for _, g in cases],'automatic_retries':0,'client':'DSH 0.2.1-rc.5','transport':'Anthropic Messages through audited loopback gateway','sampling':'provider default; no top_p override in installed transport','cost_estimate_ceiling_usd':3.0 if args.max_output_tokens>32768 else 1.0,'wall_time_limit_seconds':None if args.max_output_tokens>32768 else 1200,'timestamp_utc':stamp})
     state={'count':0, 'case':None, 'error':None}
     class Gate(http.server.BaseHTTPRequestHandler):
         def log_message(self,*a): pass
         def do_POST(self):
             body=self.rfile.read(int(self.headers['Content-Length']))
             payload=json.loads(body); folder=state['case']; state['count']+=1
+            if args.no_thinking:
+                dump(folder/'client_request.json',payload)
+                payload['thinking']={'type':'disabled'}
+                payload.pop('output_config',None)
+                body=json.dumps(payload,ensure_ascii=False).encode('utf-8')
+            if not args.no_thinking and args.effort == 'max':
+                dump(folder/'client_request.json',payload)
+                payload['thinking']={'type':'enabled'}
+                payload['output_config']={'effort':'max'}
+                body=json.dumps(payload,ensure_ascii=False).encode('utf-8')
             dump(folder/'request.json',payload)
             try:
                 assert self.path == '/v1/messages', 'Unexpected API route'
@@ -121,8 +134,12 @@ def main():
                 assert payload.get('max_tokens') == args.max_output_tokens, 'Wrong output budget'
                 assert text_blocks(payload.get('system')).strip() == SYSTEM, 'System prompt contamination'
                 assert not payload.get('tools'), 'Tools must be absent'
-                assert payload.get('output_config',{}).get('effort') == 'high', 'Wrong effort'
-                assert payload.get('thinking',{}).get('type') in ('enabled','adaptive'), 'Thinking not enabled'
+                if args.thinking == 'enabled':
+                    assert args.no_thinking or payload.get('output_config',{}).get('effort') == args.effort, 'Wrong effort'
+                    assert payload.get('thinking',{}).get('type') in (('disabled',) if args.no_thinking else ('enabled','adaptive')), 'Wrong thinking mode'
+                else:
+                    assert payload.get('thinking',{}).get('type') == 'disabled', 'Thinking not disabled'
+                    assert not payload.get('output_config'), 'Unexpected reasoning effort'
                 msgs=payload['messages']; assert len(msgs)==1 and msgs[0]['role']=='user', 'Extra messages'
                 assert text_blocks(msgs[0]['content']) == state['prompt'], 'User prompt contamination'
             except AssertionError as e:
@@ -143,7 +160,7 @@ def main():
                 self.send_response(200); self.send_header('Content-Type','text/event-stream'); self.end_headers(); self.wfile.write(raw)
     server=http.server.ThreadingHTTPServer(('127.0.0.1',0),Gate)
     threading.Thread(target=server.serve_forever,daemon=True).start()
-    patch=batch/'replication.patch.yml'; overlay(patch,server.server_port,args.max_output_tokens)
+    patch=batch/'replication.patch.yml'; overlay(patch,server.server_port,args.max_output_tokens,args.thinking)
     results=[]
     try:
         for network_id, game in cases:

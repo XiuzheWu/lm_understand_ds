@@ -1,0 +1,8 @@
+{
+  "case": "freeway",
+  "max_inference_calls": 1,
+  "previous_batch": "live_393216_20261103T055320Z",
+  "request_identical": true,
+  "feedback_provided": false,
+  "note": "Original manifest max_inference_calls=4 is inherited upper bound; selected case count is 1."
+}

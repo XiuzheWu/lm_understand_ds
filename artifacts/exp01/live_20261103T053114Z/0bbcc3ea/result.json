@@ -1,0 +1,21 @@
+{
+  "id": "0bbcc3ea",
+  "true": "freeway",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "max_tokens",
+  "usage": {
+    "input_tokens": 69093,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 1152,
+    "output_tokens": 32768,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 175.744818,
+  "exit_code": 1,
+  "reasoning_chars": 94374,
+  "live": true,
+  "game_line": "",
+  "guess": null,
+  "correct": false,
+  "confidence": null
+}

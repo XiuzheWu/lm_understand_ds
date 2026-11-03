@@ -1,0 +1,21 @@
+{
+  "id": "dfc6cb65",
+  "true": "pong",
+  "returned_model": "deepseek-flash",
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 69121,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 1152,
+    "output_tokens": 23508,
+    "service_tier": "standard"
+  },
+  "wall_seconds": 120.605397,
+  "exit_code": 0,
+  "reasoning_chars": 59904,
+  "live": true,
+  "game_line": "Pong, specifically a Pong-like tennis game on a 10×10 grid with an 8×8 playable interior.",
+  "guess": "pong",
+  "correct": true,
+  "confidence": 94.0
+}
