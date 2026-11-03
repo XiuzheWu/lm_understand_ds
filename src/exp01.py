@@ -92,7 +92,9 @@ def parse_stream(path):
 def main():
     p=argparse.ArgumentParser(); p.add_argument('--live', action='store_true')
     p.add_argument('--max-output-tokens', type=int, choices=[32768,393216], default=32768)
+    p.add_argument('--case', choices=[g for _, g in CASES], help='Run one case in a fresh batch')
     args=p.parse_args()
+    cases = [(n, g) for n, g in CASES if args.case is None or g == args.case]
     upstream_commit=subprocess.check_output(['git','-C',str(UPSTREAM),'rev-parse','HEAD'],text=True).strip()
     if upstream_commit != '4d09ba6d6a7e891dd8063974dfe81b3d78e3494f':
         raise SystemExit('Unexpected upstream commit')
@@ -103,7 +105,7 @@ def main():
     stamp=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
     batch=ROOT / 'runs/exp01' / (('live_' if args.live else 'mock_')+str(args.max_output_tokens)+'_'+stamp)
     batch.mkdir(parents=True, exist_ok=False)
-    dump(batch/'manifest.json',{'upstream_commit':upstream_commit,'model':'deepseek-flash','effort':'high','max_output_tokens':args.max_output_tokens,'live':args.live,'max_inference_calls':4,'automatic_retries':0,'client':'DSH 0.2.1-rc.5','transport':'Anthropic Messages through audited loopback gateway','sampling':'provider default; no top_p override in installed transport','cost_estimate_ceiling_usd':3.0 if args.max_output_tokens>32768 else 1.0,'wall_time_limit_seconds':None if args.max_output_tokens>32768 else 1200,'timestamp_utc':stamp})
+    dump(batch/'manifest.json',{'upstream_commit':upstream_commit,'model':'deepseek-flash','effort':'high','max_output_tokens':args.max_output_tokens,'live':args.live,'max_inference_calls':len(cases),'cases':[g for _, g in cases],'automatic_retries':0,'client':'DSH 0.2.1-rc.5','transport':'Anthropic Messages through audited loopback gateway','sampling':'provider default; no top_p override in installed transport','cost_estimate_ceiling_usd':3.0 if args.max_output_tokens>32768 else 1.0,'wall_time_limit_seconds':None if args.max_output_tokens>32768 else 1200,'timestamp_utc':stamp})
     state={'count':0, 'case':None, 'error':None}
     class Gate(http.server.BaseHTTPRequestHandler):
         def log_message(self,*a): pass
@@ -144,7 +146,7 @@ def main():
     patch=batch/'replication.patch.yml'; overlay(patch,server.server_port,args.max_output_tokens)
     results=[]
     try:
-        for network_id, game in CASES:
+        for network_id, game in cases:
             folder=batch/network_id; folder.mkdir()
             prompt=(UPSTREAM/f'exp1_which_game/runs/{game}/prompt.txt').read_text(encoding='utf-8')
             dump(folder/'source.json',{'source_file':f'exp1_which_game/runs/{game}/prompt.txt','normalized_prompt_sha256':hashlib.sha256(prompt.encode()).hexdigest(),'source_bytes_sha256':hashlib.sha256((UPSTREAM/f'exp1_which_game/runs/{game}/prompt.txt').read_bytes()).hexdigest()})

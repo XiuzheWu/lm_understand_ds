@@ -1,0 +1,293 @@
+[
+  {
+    "claimed_index": 3,
+    "quoted_values": [
+      "-0.477",
+      "0.440"
+    ],
+    "matching_indices": [
+      3
+    ],
+    "claimed_coordinate": [
+      0,
+      0,
+      3
+    ],
+    "actual_coordinates": [
+      [
+        0,
+        0,
+        3
+      ]
+    ]
+  },
+  {
+    "claimed_index": 53,
+    "quoted_values": [
+      "-0.454",
+      "0.418"
+    ],
+    "matching_indices": [
+      53
+    ],
+    "claimed_coordinate": [
+      1,
+      0,
+      3
+    ],
+    "actual_coordinates": [
+      [
+        1,
+        0,
+        3
+      ]
+    ]
+  },
+  {
+    "claimed_index": 108,
+    "quoted_values": [
+      "-0.337",
+      "-0.323",
+      "-0.815",
+      "-1.443"
+    ],
+    "matching_indices": [
+      109
+    ],
+    "claimed_coordinate": [
+      2,
+      1,
+      3
+    ],
+    "actual_coordinates": [
+      [
+        2,
+        1,
+        4
+      ]
+    ]
+  },
+  {
+    "claimed_index": 113,
+    "quoted_values": [
+      "-0.267",
+      "-0.479",
+      "1.132"
+    ],
+    "matching_indices": [
+      114
+    ],
+    "claimed_coordinate": [
+      2,
+      2,
+      3
+    ],
+    "actual_coordinates": [
+      [
+        2,
+        2,
+        4
+      ]
+    ]
+  },
+  {
+    "claimed_index": 118,
+    "quoted_values": [
+      "0.341",
+      "-0.786",
+      "0.958",
+      "2.042"
+    ],
+    "matching_indices": [
+      119
+    ],
+    "claimed_coordinate": [
+      2,
+      3,
+      3
+    ],
+    "actual_coordinates": [
+      [
+        2,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "claimed_index": 166,
+    "quoted_values": [
+      "3.551",
+      "2.003"
+    ],
+    "matching_indices": [
+      169
+    ],
+    "claimed_coordinate": [
+      3,
+      3,
+      1
+    ],
+    "actual_coordinates": [
+      [
+        3,
+        3,
+        4
+      ]
+    ]
+  },
+  {
+    "claimed_index": 171,
+    "quoted_values": [
+      "1.071",
+      "1.112",
+      "1.048"
+    ],
+    "matching_indices": [
+      174
+    ],
+    "claimed_coordinate": [
+      3,
+      4,
+      1
+    ],
+    "actual_coordinates": [
+      [
+        3,
+        4,
+        4
+      ]
+    ]
+  },
+  {
+    "claimed_index": 206,
+    "quoted_values": [
+      "0.480",
+      "-0.707",
+      "1.516"
+    ],
+    "matching_indices": [
+      209
+    ],
+    "claimed_coordinate": [
+      4,
+      1,
+      1
+    ],
+    "actual_coordinates": [
+      [
+        4,
+        1,
+        4
+      ]
+    ]
+  },
+  {
+    "claimed_index": 57,
+    "quoted_values": [
+      "-0.550",
+      "0.442",
+      "0.464"
+    ],
+    "matching_indices": [
+      57
+    ],
+    "claimed_coordinate": [
+      1,
+      1,
+      2
+    ],
+    "actual_coordinates": [
+      [
+        1,
+        1,
+        2
+      ]
+    ]
+  },
+  {
+    "claimed_index": 62,
+    "quoted_values": [
+      "-0.633",
+      "0.518",
+      "0.450"
+    ],
+    "matching_indices": [
+      62
+    ],
+    "claimed_coordinate": [
+      1,
+      2,
+      2
+    ],
+    "actual_coordinates": [
+      [
+        1,
+        2,
+        2
+      ]
+    ]
+  },
+  {
+    "claimed_index": 92,
+    "quoted_values": [
+      "-0.473",
+      "0.479",
+      "0.508"
+    ],
+    "matching_indices": [],
+    "claimed_coordinate": [
+      1,
+      8,
+      2
+    ],
+    "actual_coordinates": []
+  },
+  {
+    "claimed_index": 114,
+    "quoted_values": [
+      "2.332",
+      "-3.398",
+      "2.359",
+      "1.809"
+    ],
+    "matching_indices": [
+      115
+    ],
+    "claimed_coordinate": [
+      2,
+      2,
+      4
+    ],
+    "actual_coordinates": [
+      [
+        2,
+        3,
+        0
+      ]
+    ]
+  },
+  {
+    "claimed_index": 119,
+    "quoted_values": [
+      "4.331",
+      "-2.970",
+      "3.311"
+    ],
+    "matching_indices": [
+      120
+    ],
+    "claimed_coordinate": [
+      2,
+      3,
+      4
+    ],
+    "actual_coordinates": [
+      [
+        2,
+        4,
+        0
+      ]
+    ]
+  }
+]
