@@ -30,7 +30,7 @@ def key_from_environment():
         except FileNotFoundError: pass
     return value.strip()
 
-def overlay(path, port):
+def overlay(path, port, max_tokens):
     default = (ROOT / 'configs/dsh-headless-base.yml').read_text(encoding='utf-8-sig')
     ids = re.findall(r'^- id: (.+)$', default, re.M)
     keep = set('timer llm session typert agent agent-default-model jobs session-persistence-jsonl session-projection storage storage-json storage-domain session-projection-cache tools system-prompt agent-loop llm-deepseek headless-startup headless-runner'.split())
@@ -50,7 +50,7 @@ def overlay(path, port):
     baseURL: http://127.0.0.1:{port}
     thinking: enabled
     reasoningEffort: high
-    maxTokens: 32768
+    maxTokens: {max_tokens}
     streamIdleTimeoutMs: 300000
     retryPolicy:
       mode: normal
@@ -58,7 +58,7 @@ def overlay(path, port):
     models:
       - id: deepseek-flash
         contextWindow: 1000000
-        maxTokens: 32768
+        maxTokens: {max_tokens}
 - id: session-persistence-jsonl
   config:
     compression: none
@@ -90,7 +90,9 @@ def parse_stream(path):
     return ''.join(reasoning), ''.join(answer), usage, model, stop
 
 def main():
-    p=argparse.ArgumentParser(); p.add_argument('--live', action='store_true'); args=p.parse_args()
+    p=argparse.ArgumentParser(); p.add_argument('--live', action='store_true')
+    p.add_argument('--max-output-tokens', type=int, choices=[32768,393216], default=32768)
+    args=p.parse_args()
     upstream_commit=subprocess.check_output(['git','-C',str(UPSTREAM),'rev-parse','HEAD'],text=True).strip()
     if upstream_commit != '4d09ba6d6a7e891dd8063974dfe81b3d78e3494f':
         raise SystemExit('Unexpected upstream commit')
@@ -99,9 +101,9 @@ def main():
     key = key_from_environment() if args.live else 'sk-mock-not-a-real-key'
     if not key: raise SystemExit('MISSING_DEEPSEEK_API_KEY: configure Windows user environment, then retry.')
     stamp=datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
-    batch=ROOT / 'runs/exp01' / (('live_' if args.live else 'mock_')+stamp)
+    batch=ROOT / 'runs/exp01' / (('live_' if args.live else 'mock_')+str(args.max_output_tokens)+'_'+stamp)
     batch.mkdir(parents=True, exist_ok=False)
-    dump(batch/'manifest.json',{'upstream_commit':upstream_commit,'model':'deepseek-flash','effort':'high','max_output_tokens':32768,'live':args.live,'max_inference_calls':4,'automatic_retries':0,'client':'DSH 0.2.1-rc.5','transport':'Anthropic Messages through audited loopback gateway','sampling':'provider default; no top_p override in installed transport','batch_budget_usd':1.0,'timestamp_utc':stamp})
+    dump(batch/'manifest.json',{'upstream_commit':upstream_commit,'model':'deepseek-flash','effort':'high','max_output_tokens':args.max_output_tokens,'live':args.live,'max_inference_calls':4,'automatic_retries':0,'client':'DSH 0.2.1-rc.5','transport':'Anthropic Messages through audited loopback gateway','sampling':'provider default; no top_p override in installed transport','cost_estimate_ceiling_usd':3.0 if args.max_output_tokens>32768 else 1.0,'wall_time_limit_seconds':None if args.max_output_tokens>32768 else 1200,'timestamp_utc':stamp})
     state={'count':0, 'case':None, 'error':None}
     class Gate(http.server.BaseHTTPRequestHandler):
         def log_message(self,*a): pass
@@ -114,7 +116,7 @@ def main():
                 assert state['count'] == 1, 'More than one inference call'
                 assert len(body) < 200000, 'Request exceeds predeclared input bound'
                 assert payload.get('model') == 'deepseek-flash', 'Wrong model'
-                assert payload.get('max_tokens') == 32768, 'Wrong output budget'
+                assert payload.get('max_tokens') == args.max_output_tokens, 'Wrong output budget'
                 assert text_blocks(payload.get('system')).strip() == SYSTEM, 'System prompt contamination'
                 assert not payload.get('tools'), 'Tools must be absent'
                 assert payload.get('output_config',{}).get('effort') == 'high', 'Wrong effort'
@@ -139,7 +141,7 @@ def main():
                 self.send_response(200); self.send_header('Content-Type','text/event-stream'); self.end_headers(); self.wfile.write(raw)
     server=http.server.ThreadingHTTPServer(('127.0.0.1',0),Gate)
     threading.Thread(target=server.serve_forever,daemon=True).start()
-    patch=batch/'replication.patch.yml'; overlay(patch,server.server_port)
+    patch=batch/'replication.patch.yml'; overlay(patch,server.server_port,args.max_output_tokens)
     results=[]
     try:
         for network_id, game in CASES:
@@ -151,7 +153,7 @@ def main():
             env=os.environ.copy(); env.update(DSH_HOME=str(folder/'dsh-home'),DEEPSEEK_API_KEY='sk-gateway-placeholder',DSH_TELEMETRY_MODE='OFF')
             start=datetime.datetime.now(datetime.timezone.utc)
             with (folder/'events.jsonl').open('wb') as stdout, (folder/'stderr.log').open('wb') as stderr:
-                proc=subprocess.run([str(CLI),'headless','--patch',str(patch),'--json','-'],input=prompt.encode(),stdout=stdout,stderr=stderr,env=env,cwd=folder,timeout=1200)
+                proc=subprocess.run([str(CLI),'headless','--patch',str(patch),'--json','-'],input=prompt.encode(),stdout=stdout,stderr=stderr,env=env,cwd=folder,timeout=None if args.max_output_tokens>32768 else 1200)
             elapsed=(datetime.datetime.now(datetime.timezone.utc)-start).total_seconds()
             if state['error'] or not (folder/'response.sse').exists():
                 print(json.dumps({'id':network_id,'returncode':proc.returncode,'error':state['error'],'folder':str(folder)}),flush=True)
@@ -166,7 +168,7 @@ def main():
             row['confidence']=float(confidence.group(1)) if confidence else None
             dump(folder/'result.json',row); results.append(row); dump(batch/'summary.json',results)
             print(json.dumps(row,ensure_ascii=False),flush=True)
-            if proc.returncode or stop != 'end_turn': raise RuntimeError('Incomplete result; batch stopped.')
+            if stop not in ('end_turn','max_tokens'): raise RuntimeError('Unexpected stop; batch stopped.')
     finally: server.shutdown()
     print('BATCH='+str(batch),flush=True)
 
