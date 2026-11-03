@@ -1,0 +1,42 @@
+{
+  "repository": "https://github.com/RikiyaT/lm_understand-logs",
+  "commit": "4d09ba6d6a7e891dd8063974dfe81b3d78e3494f",
+  "scope": "Initial pilot prompt and harness files only, not full material verification",
+  "files": [
+    {
+      "path": "harness/instructions.md",
+      "bytes": 28,
+      "sha256": "50790093946c1c6a60920aade678903b95cd8e76625f0b89fc418754fee5bbee"
+    },
+    {
+      "path": "harness/codex_config.toml",
+      "bytes": 1012,
+      "sha256": "e83a22ca156782631dbbbbefd419c6cb2b0489c22a8731f9b92c455451fe355a"
+    },
+    {
+      "path": "harness/sandbox.py",
+      "bytes": 3351,
+      "sha256": "41150bea3381f149c1e9a84b3b9ac25329f8fe4bf9907bb3e48009b51557c86f"
+    },
+    {
+      "path": "exp1_which_game/runs/breakout/prompt.txt",
+      "bytes": 116093,
+      "sha256": "df78600a91f0566d4a00b2474a55a1b8fd0e788e440b5da8bf5627d371f7f165"
+    },
+    {
+      "path": "exp3_language/runs/python_r0/message.txt",
+      "bytes": 6679,
+      "sha256": "94e0abadeff33cbffec20bff2f5972e188ce71a604d5a5e22053b043d547acb0"
+    },
+    {
+      "path": "exp4_fix_car/runs/oneshot_repair/reply/prompt.txt",
+      "bytes": 579340,
+      "sha256": "fd81befafeef3ca853b211bfacc7aa703f9f12dd44323275d008929dfe687879"
+    },
+    {
+      "path": "exp8_math/runs/p50c/turns/t001/prompt.txt",
+      "bytes": 10341,
+      "sha256": "4a6aad29a24898e845dd50e09618050a5b936550675d4f95a7d0ae05c6fcd561"
+    }
+  ]
+}
